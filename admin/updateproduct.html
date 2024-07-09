@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card | Ecommerce</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body class="bg-[#FFFFFF]">
+
+    <!-- Navbar Start -->
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
+        <div class="flex justify-between items-center py-2 md:py-4 px-4 md:px-10">
+            <a href="dashboard.html" class="text-xl sm:text-2xl text-blue-500 font-semibold">Ecommerce</a>
+            <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen duration-700 pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0" aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+            <ul class="space-y-2 font-medium">
+            <li>
+                <a href="dashboard.html" class="flex items-center gap-3 p-2 text-gray-500 rounded-lg hover:bg-gray-100 group">
+                    <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                        <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
+                        <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
+                    </svg>
+                    <span class="text-sm md:text-base text-gray-500 group-hover:text-black">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="product.html" class="flex items-center gap-3 p-2 text-gray-500 rounded-lg hover:bg-gray-100 group">
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                        <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
+                    </svg>
+                    <span class="text-sm md:text-base text-gray-500 group-hover:text-black">Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="flex items-center gap-3 p-2 text-gray-500 rounded-lg hover:bg-gray-100 group">
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
+                    </svg>
+                    <span class="text-sm md:text-base text-gray-500 group-hover:text-black">Logout</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Hero Start -->
+    <section class="md:ml-[19rem] md:mr-[3rem] mt-20 md:mt-28 space-y-4">
+        <div class="bg-white p-3 rounded-2xl">
+            <form action="" method="" class="w-full md:w-[30rem] lg:w-[40rem] bg-slate-50 bg-opacity-80 p-4 md:p-7 rounded-2xl">
+                <div class="mb-5">
+                    <label for="title" class="block mb-2 text-xs md:text-sm font-medium text-gray-900">Title</label>
+                    <input type="text" id="title" value="Noteworthy technology acquisitions 2021" class="bg-white transition transform duration-700 border border-gray-300 text-gray-900 text-xs md:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2 px-6"/>
+                </div>
+                <div class="mb-5">
+                    <label for="description" class="block mb-2 text-xs md:text-sm font-medium text-gray-900">Description</label>
+                    <textarea type="text" id="description" class="bg-white transition transform duration-700 border border-gray-300 text-gray-900 text-xs md:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-[6rem] py-2 px-6">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</textarea>
+                </div>
+                <div class="mb-5">
+                    <label for="price" class="block mb-2 text-xs md:text-sm font-medium text-gray-900">Price</label>
+                    <input type="text" id="price" value="Rp.34.000" class="bg-white transition transform duration-700 border border-gray-300 text-gray-900 text-xs md:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2 px-6"/>
+                </div>
+                <button type="submit" class="w-full text-white transition transform duration-700 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs md:text-sm px-10 py-2.5 text-center uppercase">Update</button>
+            </form>
+        </div>
+    </section>
+    <!-- Hero End -->
+    <!-- Navbar Start -->
+
+    <!-- Script Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script End -->
+     
+</body>
+</html>
